@@ -1,0 +1,25 @@
+.hero-bg {
+  background-image: url('../images/hero_bg@2x.png');
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
+
+  &::after {
+    content: " ";
+    z-index: 2;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.nav-bg {
+  background-color: #060f30;
+  color: #fff;
+}

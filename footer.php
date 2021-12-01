@@ -11,23 +11,16 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'gabana-template' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'gabana-template' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'gabana-template' ), 'gabana-template', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer class="container-fluid">
+      <div class="row">
+        <div class="col text-center">
+          <p>GABANA ARREDAMENTI</p>
+          <p> via Piave, 4 - Frazione Carzago - 25080 - Calvagese della Riviera - Italia</p>
+          <p>tel. 030601208 \ fax 0306800854 \ gabanaarredamenti.it</p>
+        </div>
+      </div>
 
+    </footer>
 <?php wp_footer(); ?>
 
 </body>

@@ -1,0 +1,11 @@
+// Load CSS Reset from NPM
+// @import "~normalize.css";
+@import "partials/_font.scss";
+@import "partials/_variables.scss";
+@import "partials/_navbar.scss";
+@import "partials/_hero.scss";
+@import "partials/_page.scss";
+
+body {
+  font-family: 'Gill Sans', sans-serif;
+}

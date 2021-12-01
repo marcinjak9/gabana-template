@@ -20,11 +20,11 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('bg-blue'); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'gabana-template' ); ?></a>
-
+<?php /*
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
@@ -57,3 +57,57 @@
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+*/ ?>
+<nav
+	class="
+		navbar navbar-expand-lg navbar-light
+		bg-transparent
+		justify-content-center
+		nav-bg
+		container
+	"
+>
+	<div class="row">
+		<div class="d-flex flex-column align-items-center">
+			<a class="navbar-brand" href="#">
+				<img src="<?php echo get_template_directory_uri(). '/images/logo@2x.png' ?>" alt="">
+			</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-bs-toggle="collapse"
+				data-bs-target="#navbarNav"
+				aria-controls="navbarNav"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav justify-content-between">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="/">HOME</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/materiali.html">MATERIALI</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/arredamenti.html">ARREDAMENTI</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/hotel.html">HOTEL</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/i-gabana.html">I GABANA</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/certificazioni.html">CERTIFICAZIONI</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/contatti.html">CONTATTTI</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
