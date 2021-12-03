@@ -49,7 +49,7 @@
       <?php foreach($galleryItems as $g): ?>
         <div class="col-12">
           <div class="gallery-item h-hotel" style="background-image: url('<?php echo get_template_directory_uri() . $g["image"] ?>')">
-            <a href="#"  class="info-box d-flex justify-content-center align-items-center expanded">
+            <a href="#"  class="info-box d-flex justify-content-center align-items-center">
               <span class="closed">INFO</span>
               <?php get_template_part('template-parts/plus-icon'); ?>
               <?php get_template_part('template-parts/minus-icon'); ?>
