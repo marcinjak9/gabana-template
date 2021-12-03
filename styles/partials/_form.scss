@@ -1,0 +1,19 @@
+.contact {
+  margin-top: 40px;
+  margin-bottom: 90px;
+  h3 {
+    font-size: 27px;
+    color: $grey;
+    margin-bottom: 20px;
+  }
+  .form-floating {
+    label {
+      font-size: 20px;
+      color: $grey;
+      text-transform: uppercase;
+    }
+    // input.form-control {
+    //   height: 73px;
+    // }
+  }
+}

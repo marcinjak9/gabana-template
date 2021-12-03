@@ -11,6 +11,7 @@
   }
 
   .navbar-brand {
+    margin: 0;
     img {
       height: 140px;
       // width: 330px;
@@ -24,9 +25,9 @@
 
     .nav-link {
       color: $grey;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-      font-size: 1.5rem;
+      padding-left: 1.3rem;
+      padding-right: 1.3rem;
+      font-size: 1.3rem;
 
       &:hover {
         color: #fff;
@@ -51,4 +52,23 @@
   }
 }
 
+.page-template-hotel, .page-template-home {
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
+}
+
+.page-template-home {
+  .navbar {
+    .navbar-nav {
+      .nav-link {
+        color: $blue;
+      }
+    }
+  }
+}
 // .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link

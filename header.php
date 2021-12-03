@@ -9,6 +9,11 @@
  * @package gabana-template
  */
 
+$logo = get_template_directory_uri(). '/images/logo@2x.png';
+// if ()
+if (get_page_template_slug() == 'home.php') {
+	$logo = get_template_directory_uri(). '/images/logo-negative@2x.png';
+}
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -68,9 +73,10 @@
 	"
 >
 	<div class="row">
+		<?php /* echo str_replace('/', '', str_replace( home_url(), '', get_permalink($post->ID))); */ ?>
 		<div class="d-flex flex-column align-items-center">
 			<a class="navbar-brand" href="#">
-				<img src="<?php echo get_template_directory_uri(). '/images/logo@2x.png' ?>" alt="">
+				<img src="<?php echo $logo; ?>" alt="">
 			</a>
 			<button
 				class="navbar-toggler"
@@ -89,22 +95,22 @@
 						<a class="nav-link active" aria-current="page" href="/">HOME</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/materiali.html">MATERIALI</a>
+						<a class="nav-link" href="/materiali">MATERIALI</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/arredamenti.html">ARREDAMENTI</a>
+						<a class="nav-link" href="/arredamenti">ARREDAMENTI</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/hotel.html">HOTEL</a>
+						<a class="nav-link" href="/hotel">HOTEL</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/i-gabana.html">I GABANA</a>
+						<a class="nav-link" href="/i-gabana">I GABANA</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/certificazioni.html">CERTIFICAZIONI</a>
+						<a class="nav-link" href="/certificazioni">CERTIFICAZIONI</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/contatti.html">CONTATTTI</a>
+						<a class="nav-link" href="/contatti">CONTATTTI</a>
 					</li>
 				</ul>
 			</div>

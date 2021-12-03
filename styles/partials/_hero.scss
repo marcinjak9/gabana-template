@@ -5,17 +5,25 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 50px;
+  position: relative;
 
-  &::after {
-    content: " ";
-    z-index: 2;
-    display: block;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.3);
+  &.home-hero {
+    min-height: 150vh;
+    margin-bottom: 0;
+  }
+
+  &.overlay {
+    &::after {
+      content: " ";
+      z-index: 2;
+      display: block;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.3);
+    }
   }
 }
 

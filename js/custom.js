@@ -23,6 +23,11 @@ var $ = jQuery;
 //   $('.image-link').magnificPopup({ type: 'image' });
 // });
 
+$('.popup-link').magnificPopup({
+  type: 'image'
+  // other options
+});
+
 $(function() {
   const title = $('.page-title h2');
   const t = title.text();
@@ -54,6 +59,16 @@ const swiper = new window.Swiper('.swiper', {
   //   el: '.swiper-scrollbar',
   // },
 });
+
+swiper.onAny(function(e) {
+  if (e === 'slideChangeTransitionEnd') {
+    console.log(swiper.activeIndex)
+    $('.slider-nav a.selected').removeClass('selected');
+    if ($('.slider-nav a')[swiper.activeIndex]) {
+      $($('.slider-nav a')[swiper.activeIndex]).addClass('selected')
+    }
+  }
+})
 
 // const setSideTitle = (index) => $('.slider-title').map((i, s) => {
 //   console.log($($(s)[index]).text(), i);

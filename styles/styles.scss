@@ -5,7 +5,14 @@
 @import "partials/_navbar.scss";
 @import "partials/_hero.scss";
 @import "partials/_page.scss";
+@import "partials/_video.scss";
+@import "partials/_slider.scss";
+@import "partials/_form.scss";
 
 body {
   font-family: 'Gill Sans', sans-serif;
+}
+
+.page {
+  margin: 0;
 }

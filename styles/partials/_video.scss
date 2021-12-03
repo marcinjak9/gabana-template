@@ -1,0 +1,38 @@
+.video-cover {
+  width: 100%;
+  margin: 0;
+  min-height: 100vh;
+
+  .vjs-big-play-button {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+
+    .vjs-icon-placeholder {
+      &::before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 6rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .video-cover {
+    min-height: 50vh;
+
+    .vjs-big-play-button {
+      width: 75px;
+      height: 75px;
+
+      .vjs-icon-placeholder {
+        &::before {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+}

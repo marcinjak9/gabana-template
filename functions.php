@@ -145,6 +145,7 @@ function gabana_template_scripts() {
 
 	wp_enqueue_style( 'video-js', get_template_directory_uri() . '/styles/video-js.css', array(), _S_VERSION );
 	wp_enqueue_style( 'swiper-bundle', get_template_directory_uri() . '/styles/swiper-bundle.min.css', array(), _S_VERSION );
+	wp_enqueue_style( 'magnific-popup', get_template_directory_uri() . '/styles/magnific-popup.css', array(), _S_VERSION );
 	wp_enqueue_style( 'gabana-template-custom', get_template_directory_uri() . '/styles/styles.css', array(), _S_VERSION );
 	wp_style_add_data( 'gabana-template-style', 'rtl', 'replace' );
 
@@ -153,6 +154,7 @@ function gabana_template_scripts() {
 	wp_enqueue_script( 'bootstrap@5.1', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), _S_VERSION, true );
 	wp_enqueue_script( 'swiper-bundle', get_template_directory_uri() . '/js/swiper-bundle.min.js', array('jquery'), _S_VERSION, true );
 	wp_enqueue_script( 'video-js', get_template_directory_uri() . '/js/video.min.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'magnific-popup', get_template_directory_uri() . '/js/magnific-popup.min.js', array('jquery'), _S_VERSION, true );
 	wp_enqueue_script( 'gabana-template-custom-scripts', get_template_directory_uri() . '/js/custom.js', array('jquery'), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
