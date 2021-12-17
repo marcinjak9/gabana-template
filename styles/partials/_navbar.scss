@@ -71,8 +71,9 @@
     }
   }
 }
+
 // .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .navbar .navbar-toggler {
     position: fixed;
     top: 20px;
@@ -107,3 +108,4 @@
     color: white;
   }
 }
+

@@ -87,7 +87,7 @@
 	color: #060f30;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
 	.navbar .navbar-toggler {
 		position: fixed;
 		top: 20px;
