@@ -65,7 +65,7 @@ if (get_page_template_slug() == 'home.php') {
 */ ?>
 <nav
 	class="
-		navbar navbar-expand-lg navbar-light
+		navbar navbar-expand-lg navbar-dark
 		bg-transparent
 		justify-content-center
 		nav-bg
@@ -75,7 +75,7 @@ if (get_page_template_slug() == 'home.php') {
 	<div class="row">
 		<?php /* echo str_replace('/', '', str_replace( home_url(), '', get_permalink($post->ID))); */ ?>
 		<div class="d-flex flex-column align-items-center">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="/">
 				<img src="<?php echo $logo; ?>" alt="">
 			</a>
 			<button

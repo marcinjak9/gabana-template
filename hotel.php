@@ -44,7 +44,7 @@
     </div>
   </section>
 
-  <section class="container px-0 gallery">
+  <section class="container gallery">
     <div class="row">
       <?php foreach($galleryItems as $g): ?>
         <div class="col-12">

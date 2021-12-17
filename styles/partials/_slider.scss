@@ -1,5 +1,19 @@
 .slider-container {
   margin-bottom: 5rem;
+
+  .side-title {
+    position: absolute;
+    bottom: 4px;
+    left: -35px;
+    transform: rotate(-90deg);
+    font-size: 2rem;
+    color: white;
+    font-family: 'Didot';
+    color: #b2b2b2;
+    font-size: 45px;
+    line-height: 45px;
+    transform-origin: top left;
+  }
 }
 
 .swiper {
@@ -84,5 +98,9 @@
         }
       }
     }
+  }
+  
+  .slider-container .side-title {
+    display: none;
   }
 }

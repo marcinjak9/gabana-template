@@ -31,3 +31,13 @@
   background-color: #060f30;
   color: #fff;
 }
+
+@media (max-width: 768px) {
+  .hero-bg {
+    min-height: 500px;
+    
+    &.home-hero {
+      min-height: 600px;
+    }
+  }
+}

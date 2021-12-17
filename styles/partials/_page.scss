@@ -15,7 +15,7 @@
     position: relative;
     &::after {
       content: " ";
-      z-index: 2;
+      z-index: 1;
       display: block;
       position: absolute;
       height: 100%;
@@ -197,9 +197,31 @@
 }
 
 footer {
+  // background-color: red;
   background-color: #b2b2b2;
   padding-top: 200px;
   padding-bottom: 50px;
+  font-size: 20px;
+  
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .title {
+    font-weight: bold;
+  }
+
+  .privacy-container {
+    margin-top: 1rem;
+
+    a:first-child {
+      margin-right: 1rem;
+    }
+  }
 }
 
 // @media (min-width: 576px) {
@@ -245,6 +267,14 @@ footer {
       font-size: 4vh;
       margin-bottom: -10px;
     }
+  }
+
+  .gallery .gallery-item.h-full {
+    min-height: 400px;
+  }
+
+  .gallery .gallery-item.h-hotel {
+    min-height: 350px;
   }
 
   .video-cover {

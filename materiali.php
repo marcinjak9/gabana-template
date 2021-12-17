@@ -1,6 +1,10 @@
 <?php /* Template Name: Materiali */
   
   get_header();
+
+  $video = get_field('video');
+  $cover = get_field('cover_video');
+  $gallery = get_field('galleria');
 ?>
 
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -13,6 +17,7 @@
     </div>
   </section>
 
+  <?php if ($video): ?>
   <section class="container-fluid px-0">
     <video
       id="my-video"
@@ -22,11 +27,11 @@
       preload="auto"
       width="640"
       height="264"
-      poster="MY_VIDEO_POSTER.jpg"
+      poster="<?php echo $cover; ?>"
       data-setup="{}"
     >
-      <source src="https://www.dropbox.com/s/a64uwycjs7w3ocp/demo.mp4?raw=1" type="video/mp4" />
-      <source src="https://www.dropbox.com/s/td7t1rkirm2n3iy/demo.webm?raw=1" type="video/webm" />
+      <source src="<?php echo $video; ?>" type="video/mp4" />
+      <!-- <source src="https://www.dropbox.com/s/td7t1rkirm2n3iy/demo.webm?raw=1" type="video/webm" /> -->
       <p class="vjs-no-js">
         To view this video please enable JavaScript, and consider upgrading to
         a web browser that
@@ -36,7 +41,9 @@
       </p>
     </video>
   </section>
+  <?php endif; ?>
 
+  <?php if( have_rows('galleria') ): ?>
   <section class="container slider-container">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-11" style="position: relative">
@@ -48,51 +55,36 @@
 
           <!-- Additional required wrapper -->
           <div class="slider-nav d-flex justify-content-around">
-            <a href="" class="slider-title selected" data-slide="0">I LEGNI</a>
-            <a href="" class="slider-title" data-slide="1">GLI OTTONI</a>
-            <a href="" class="slider-title" data-slide="2">IL CRISTALLO</a>
-            <a href="" class="slider-title" data-slide="3">LA PIETRA</a>
-            <a href="" class="slider-title" data-slide="4">LA PELLE</a>
-            <a href="" class="slider-title" data-slide="5">IL BRONZO</a>
+            <?php 
+              while( have_rows('galleria') ) : the_row(); 
+              $image = get_sub_field('immagine');
+              $title = get_sub_field('titolo');
+            ?>
+              <a href="" class="slider-title" data-slide="<?php echo get_row_index() - 1; ?>"><?php echo $title; ?></a>
+            <?php endwhile; ?>
           </div>
-          <!-- <div class="side-title">
+          <div class="side-title">
             Side Title
-          </div> -->
+          </div>
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">
-              <img src="https://source.unsplash.com/collection/1015577/1920x1080?w=1" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="https://source.unsplash.com/collection/1015577/1920x1080?w=222" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="https://source.unsplash.com/collection/1015577/1920x1080?w=3111" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="https://source.unsplash.com/collection/1015577/1920x1080?w=4" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="https://source.unsplash.com/collection/1015577/1920x1080?w=5" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="https://source.unsplash.com/collection/1015577/1920x1080?w=6" alt="">
-            </div>
+            <?php 
+              while( have_rows('galleria') ) : the_row(); 
+              $image = get_sub_field('immagine');
+              $title = get_sub_field('titolo');
+            ?>
+              <div class="swiper-slide">
+                <img src="<?php echo $image; ?>" alt="">
+              </div>
+            <?php endwhile; ?>
           </div>
-
-          
-          <!-- If we need pagination -->
-  
-          <!-- If we need navigation buttons -->
-  
-          <!-- If we need scrollbar -->
-          <!-- <div class="swiper-scrollbar"></div> -->
         </div>
         <div class="swiper-pagination"></div>
       </div>
     </div>
     <!-- Slider main container -->
   </section>
+  <?php endif; ?>
 <?php endwhile; endif; ?>
 
 <?php

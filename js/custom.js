@@ -29,8 +29,8 @@ $('.popup-link').magnificPopup({
 });
 
 $(function() {
-  const title = $('.page-title h2');
-  const t = title.text();
+  var title = $('.page-title h2');
+  var t = title.text();
 
   title.text('');
   title.addClass('rendered');
@@ -38,7 +38,7 @@ $(function() {
   t.split('').map((letter) => title.append(`<span>${letter}</span>`));
 });
 
-const swiper = new window.Swiper('.swiper', {
+var swiper = new window.Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
   // loop: true,
@@ -60,9 +60,20 @@ const swiper = new window.Swiper('.swiper', {
   // },
 });
 
+function setSideTitle (index) {
+  $('.slider-title').map( function(i, s){
+  if (i === index) {
+    // var t = $($(s)[index]).text();
+    var t = s.text;
+    $('.side-title').html(t);
+  }
+  return s;
+  })
+};
+
 swiper.onAny(function(e) {
   if (e === 'slideChangeTransitionEnd') {
-    console.log(swiper.activeIndex)
+    setSideTitle(swiper.activeIndex);
     $('.slider-nav a.selected').removeClass('selected');
     if ($('.slider-nav a')[swiper.activeIndex]) {
       $($('.slider-nav a')[swiper.activeIndex]).addClass('selected')
@@ -70,25 +81,23 @@ swiper.onAny(function(e) {
   }
 })
 
-// const setSideTitle = (index) => $('.slider-title').map((i, s) => {
-//   console.log($($(s)[index]).text(), i);
-//   if (i === index) {
-//     const t = $($(s)[index]).text();
-//     console.log(t);
-//     $('.side-title').html(t);
-//   }
-//   return s;
-// });
+// function setSlide() {
+//   var p = $('.slider-nav a.selected').data('slide');
+//   swiper.slideTo(p);
+//   $('.slider-nav a.selected').removeClass('selected');
+//   // $(e.currentTarget).addClass('selected');
+// }
+var initialSlide = $('.slider-nav a')[0];
+$(initialSlide).addClass('selected')
+setSideTitle(0)
 
-// setSideTitle(2);
 
 $('[data-slide]').on('click', function(e) {
   e.preventDefault();
-  const p = $(e.currentTarget).data('slide');
+  var p = $(e.currentTarget).data('slide');
   swiper.slideTo(p);
   $('.slider-nav a.selected').removeClass('selected');
   $(e.currentTarget).addClass('selected');
-  // console.log(p);
   // setSideTitle(parseFloat(p));
 });
 

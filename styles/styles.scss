@@ -1,7 +1,7 @@
 // Load CSS Reset from NPM
 // @import "~normalize.css";
-@import "partials/_font.scss";
 @import "partials/_variables.scss";
+@import "partials/_font.scss";
 @import "partials/_navbar.scss";
 @import "partials/_hero.scss";
 @import "partials/_page.scss";
@@ -15,4 +15,15 @@ body {
 
 .page {
   margin: 0;
+}
+
+a {
+  color: inherit;
+  // text-decoration: none;
+  &:hover {
+    color: $blue;
+  }
+  &:visited {
+    color: inherit;
+  }
 }

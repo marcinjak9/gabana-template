@@ -9,14 +9,28 @@
  * @package gabana-template
  */
 
+$fields = get_fields('option');
+$phone = $fields["telefono"];
+$fax = $fields["fax"];
+$sito = $fields["sito"];
 ?>
 
 <footer class="container-fluid">
       <div class="row">
         <div class="col text-center">
-          <p>GABANA ARREDAMENTI</p>
-          <p> via Piave, 4 - Frazione Carzago - 25080 - Calvagese della Riviera - Italia</p>
-          <p>tel. 030601208 \ fax 0306800854 \ gabanaarredamenti.it</p>
+          <p class="title"><?php echo $fields["titolo"]; ?></p>
+          <p>
+            <a href="https://goo.gl/maps/1pQDkif2FTqe8vwp9" target="_blank">
+              <?php echo $fields["indirizzo"] ?>
+            </a>
+          </p>
+          <p>
+            tel. <a href="tel:<?php echo $phone; ?>"><?php echo $phone;?></a> \ fax <?php echo $fax; ?> \ <?php echo $sito; ?>
+          </p>
+          <div class="privacy-container">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie policy</a>
+          </div>
         </div>
       </div>
 

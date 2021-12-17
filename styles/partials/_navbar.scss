@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 3;
+    z-index: 999;
   }
 
   .navbar-brand {
@@ -58,7 +58,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 3;
+    z-index: 999;
   }
 }
 
@@ -72,3 +72,38 @@
   }
 }
 // .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link
+@media (max-width: 768px) {
+  .navbar .navbar-toggler {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: $blue;
+  }
+
+  .navbar .row .navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: $blue;
+    color: white;
+    z-index: 998;
+  
+    .navbar-nav {
+      margin: 0;
+      padding: 90px 30px;
+
+      .nav-link {
+        color: white !important;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+  
+  .page-template-home .navbar .navbar-nav .nav-link {
+    color: white;
+  }
+}
