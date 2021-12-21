@@ -224,6 +224,29 @@ footer {
   }
 }
 
+.about {
+  .gabana-image {
+    max-height: 600px;
+    height: 100%;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  p {
+    font-size: 25px;
+    color: $grey;
+    margin-top: 1rem;
+  }
+}
+
+.c-margin {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 // @media (min-width: 576px) {
 
 // }

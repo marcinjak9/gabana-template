@@ -376,6 +376,27 @@ footer .privacy-container a:first-child {
 	margin-right: 1rem;
 }
 
+.about .gabana-image {
+	max-height: 600px;
+	height: 100%;
+}
+
+.about .image-container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.about p {
+	font-size: 25px;
+	color: #b2b2b2;
+	margin-top: 1rem;
+}
+
+.c-margin {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
 @media (max-width: 992px) {
 	.page-title h2.rendered {
 		font-size: 6vh;
@@ -410,6 +431,8 @@ footer .privacy-container a:first-child {
 	width: 100px;
 	height: 100px;
 	background-color: transparent;
+	margin: 0;
+	transform: translate(-50%, -50%);
 }
 
 .video-cover .vjs-big-play-button .vjs-icon-placeholder::before {
@@ -417,6 +440,14 @@ footer .privacy-container a:first-child {
 	justify-content: center;
 	align-items: center;
 	font-size: 6rem;
+}
+
+.about .video-cover {
+	min-height: 320px;
+}
+
+.wide-video {
+	min-height: 640px;
 }
 
 @media (max-width: 768px) {

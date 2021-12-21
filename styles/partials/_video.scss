@@ -8,6 +8,8 @@
     width: 100px;
     height: 100px;
     background-color: transparent;
+    margin: 0;
+    transform: translate(-50%, -50%);
 
     .vjs-icon-placeholder {
       &::before {
@@ -18,6 +20,16 @@
       }
     }
   }
+}
+
+.about {
+  .video-cover {
+    min-height: 320px;
+  }
+}
+
+.wide-video {
+  min-height: 640px;
 }
 
 @media (max-width: 768px) {
