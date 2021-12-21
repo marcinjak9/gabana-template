@@ -18,10 +18,10 @@
           preload="auto"
           width="640"
           height="264"
-          poster="/uploads/2021/12/Screenshot-2021-12-15-at-15.59.30.png"
+          poster="http://157.230.115.37/wp-content/uploads/2021/12/Rettangolo-15@2x.png"
           data-setup="{}"
         >
-          <source src="/wp-content/uploads/2021/12/demo.mp4" type="video/mp4" />
+          <source src="http://157.230.115.37/wp-content/uploads/2021/12/video_01.mp4" type="video/mp4" />
           <!-- <source src="https://www.dropbox.com/s/td7t1rkirm2n3iy/demo.webm?raw=1" type="video/webm" /> -->
           <p class="vjs-no-js">
             To view this video please enable JavaScript, and consider upgrading to
@@ -39,11 +39,11 @@
     </div>
 
     <div class="row c-margin">
-      <div class="col-12 col-md-6 mb-3">
-        <img src="http://placehold.it/600x600" alt="">
+      <div class="col-12 col-md-6 mb-3 w-full">
+        <img src="http://placehold.it/600x600" alt="" style="width: 100%">
       </div>
-      <div class="col-12 col-md-6 mb-3">
-        <img src="http://placehold.it/600x600" alt="">
+      <div class="col-12 col-md-6 mb-3 w-full">
+        <img src="http://placehold.it/600x600" alt="" style="width: 100%">
       </div>
     </div>
   </div>
@@ -63,10 +63,10 @@
           preload="auto"
           width="640"
           height="700px"
-          poster="/uploads/2021/12/Screenshot-2021-12-15-at-15.59.30.png"
+          poster="http://157.230.115.37/wp-content/uploads/2021/12/Rettangolo-15@2x.png"
           data-setup="{}"
         >
-          <source src="/wp-content/uploads/2021/12/demo.mp4" type="video/mp4" />
+          <source src="http://157.230.115.37/wp-content/uploads/2021/12/video_01.mp4" type="video/mp4" />
           <!-- <source src="https://www.dropbox.com/s/td7t1rkirm2n3iy/demo.webm?raw=1" type="video/webm" /> -->
           <p class="vjs-no-js">
             To view this video please enable JavaScript, and consider upgrading to
