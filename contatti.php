@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
       <div class="col-10 d-flex flex-column justify-content-center align-items-center">
         <img src="<?php echo get_template_directory_uri(). '/images/decoration-up@2x.png'; ?>" alt="">
-        <p class="text-center text-white">
+        <p class="text-center text-grey">
           Via Piave n. 4
           <br>
           Frazione Carzago

@@ -44,6 +44,30 @@
   <?php endif; ?>
 
   <?php if( have_rows('galleria') ): ?>
+    <section class="container">
+      <div class="row justify-content-center">
+        <?php 
+          while( have_rows('galleria') ) : the_row(); 
+          $image = get_sub_field('immagine');
+          $title = get_sub_field('titolo');
+          $text = get_sub_field('text');
+        ?>
+          <div class="card-image">
+            <div class="img-container">
+              <img src="<?php echo $image; ?>" alt="">
+              <div class="overlay">
+                <p><?php echo $text; ?></p>
+              </div>
+            </div>
+            <div class="side-title">
+                <?php echo $title; ?>
+              </div>
+          </div>
+        <?php endwhile; ?>
+      </div>
+
+    </section>
+  <?php /*
   <section class="container slider-container">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-11" style="position: relative">
@@ -83,6 +107,7 @@
       </div>
     </div>
     <!-- Slider main container -->
+  <?php */ ?>
   </section>
   <?php endif; ?>
 <?php endwhile; endif; ?>

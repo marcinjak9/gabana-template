@@ -89,6 +89,7 @@ if (get_page_template_slug() == 'home.php') {
 			>
 				<span class="navbar-toggler-icon"></span>
 			</button>
+			<!-- 
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav justify-content-between">
 					<li class="nav-item">
@@ -98,22 +99,40 @@ if (get_page_template_slug() == 'home.php') {
 						<a class="nav-link" href="/materiali">MATERIALI</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/arredamenti">ARREDAMENTI</a>
+						<a class="nav-link" href="/luxury">LUXURY</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/hotel">HOTEL</a>
+						<a class="nav-link" href="/contract">CONTRACT</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/i-gabana">I GABANA</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/certificazioni">CERTIFICAZIONI</a>
+						<a class="nav-link" href="/servizi">SERVIZI</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/contatti">CONTATTTI</a>
 					</li>
-				</ul>
-			</div>
+				</ul> 
+			</div> -->
+				<?php
+				if( function_exists('pll_current_language') ) {
+					$lang_slug = pll_current_language('slug');
+				} else {
+						$lang_slug = '';
+				}
+				$menu_name = $a['menu-slug'] . '-' . $lang_slug;
+					wp_nav_menu(
+						array(
+							// 'menu' => $menu_name,
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+							'menu_class'     => 'navbar-nav justify-content-between',
+							'container_class' => 'collapse navbar-collapse',
+							'container_id' => 'navbarNav'
+						)
+					);
+					?>
 		</div>
 	</div>
 </nav>

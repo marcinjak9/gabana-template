@@ -13,9 +13,25 @@ $fields = get_fields('option');
 $phone = $fields["telefono"];
 $fax = $fields["fax"];
 $sito = $fields["sito"];
+$facebook = $fields["facebook"];
+$linkedin = $fields["linkedin"];
+$instagram = $fields["instagram"];
 ?>
 
 <footer class="container-fluid">
+  <div class="row socials">
+    <div class="col text-center">
+      <a class="icon" href="<?php echo $facebook; ?>">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a class="icon" href="<?php echo $instagram; ?>">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a class="icon" href="<?php echo $linkedin; ?>">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+    </div>
+  </div>
       <div class="row">
         <div class="col text-center">
           <p class="title"><?php echo $fields["titolo"]; ?></p>

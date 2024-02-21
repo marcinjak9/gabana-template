@@ -1,6 +1,7 @@
 .navbar {
   margin-top: 5rem;
   margin-bottom: 5rem;
+  z-index: 999;
 
   &.nav-absolute {
     position: absolute;
@@ -21,19 +22,25 @@
   }
 
   .navbar-nav {
+    margin: 0;
     margin-top: 3rem;
 
-    .nav-link {
+    .menu-item {
       color: $grey;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding-left: 0.7rem;
+      padding-right: 0.7rem;
       font-size: 1.4rem;
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+      }
 
       &:hover {
         color: #fff;
       }
 
-      &.active {
+      &.current-menu-item {
         color: #fff;
       }
     }
@@ -65,21 +72,22 @@
 .page-template-home {
   .navbar {
     .navbar-nav {
-      .nav-link {
-        color: $blue;
+      .menu-item {
+        // color: $blue;
+        color: white;
       }
     }
   }
 }
 
-// .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link
+// .navbar-light .navbar-nav .menu-item.active, .navbar-light .navbar-nav .show>.menu-item
 @media (max-width: 992px) {
   .navbar .navbar-toggler {
     position: fixed;
     top: 20px;
     right: 20px;
     z-index: 999;
-    background-color: $blue;
+    // background-color: $blue;
   }
 
   .navbar .row .navbar-collapse {
@@ -88,7 +96,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background: $blue;
+    background: $dark-grey;
     color: white;
     z-index: 998;
   
@@ -96,7 +104,7 @@
       margin: 0;
       padding: 90px 30px;
 
-      .nav-link {
+      .menu-item {
         color: white !important;
         padding-top: 1rem;
         padding-bottom: 1rem;
@@ -104,7 +112,7 @@
     }
   }
   
-  .page-template-home .navbar .navbar-nav .nav-link {
+  .page-template-home .navbar .navbar-nav .menu-item {
     color: white;
   }
 }

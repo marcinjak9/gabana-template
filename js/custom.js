@@ -30,12 +30,17 @@ $('.popup-link').magnificPopup({
 
 $(function() {
   var title = $('.page-title h2');
-  var t = title.text();
+  title.map((i, node) => {
+    var t = $(node).text();
+    $(node).text('');
+    $(node).addClass('rendered');
+    console.log(t)
+    t.split('').map((letter) => $(node).append(`<span>${letter}</span>`));
+  })
+  // title.text('');
+  // title.addClass('rendered');
 
-  title.text('');
-  title.addClass('rendered');
-
-  t.split('').map((letter) => title.append(`<span>${letter}</span>`));
+  // t.split('').map((letter) => title.append(`<span>${letter}</span>`));
 });
 
 var swiper = new window.Swiper('.swiper', {

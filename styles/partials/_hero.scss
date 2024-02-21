@@ -8,8 +8,12 @@
   position: relative;
 
   &.home-hero {
-    min-height: 150vh;
+    min-height: 110vh;
     margin-bottom: 0;
+
+    .text-overlay {
+      padding-top: 100px;
+    }
   }
 
   &.overlay {
@@ -38,6 +42,10 @@
     
     &.home-hero {
       min-height: 600px;
+
+      .text-overlay {
+        padding-top: 170px;
+      }
     }
   }
 }
